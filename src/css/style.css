@@ -12,7 +12,9 @@ body {
   background-position: center center; }
 
 #portfolio {
-  background-color: #050505; }
+  background-image: linear-gradient(270deg, #124, #c8c8c8, #124, #fafafa); }
+  #portfolio .col {
+    padding: 10px; }
 
 #inspire {
   background: url("../assets/contact_large_2x.jpg") no-repeat;
@@ -133,15 +135,25 @@ img:hover {
 .navbar a:hover {
   transform: scale(1.3); }
 
-@keyframes fadeIn {
-  from {
-    opacity: 0; }
-  to {
-    opacity: 1; } }
-
 .social .fa {
   transition-property: all;
   transition-duration: 0.2s; }
 
 .social .fa:hover {
   transform: scale(1.5); }
+
+.come-in {
+  animation: come-in 0.4s ease forwards; }
+
+.go-out {
+  animation: go-out 0.4s ease forwards; }
+
+@keyframes come-in {
+  to {
+    transform: scale(1.08); } }
+
+@keyframes go-out {
+  from {
+    transform: scale(1.08); }
+  to {
+    transform: scale(1); } }

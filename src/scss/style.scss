@@ -1,5 +1,5 @@
 body {
-    color: #fff; 
+    color: #fff;
     font-family: "Maven Pro", "Segoe UI", Helvetica, Arial, sans-serif;
     text-align: center;
   }
@@ -12,22 +12,26 @@ body {
     background-position: center center;
   }
   #portfolio{
-    background-color: rgb(5, 5, 5);
-    }  
+    background-image: linear-gradient(270deg, #124  , #c8c8c8,#124 , #fafafa);
+    .col{
+    padding: 10px;
+  }
+    }
+
   #inspire{
     background: url('../assets/contact_large_2x.jpg') no-repeat;
     background-size: cover;
     background-position: center center;
-    }  
+    }
   #contact{
     background: url('../assets/download_large_2x.jpg') no-repeat;
     background-size: cover;
     background-position: center center;
     min-height: 30vh;
-    }  
+    }
   #about{
     font-family: "Baloo", "Segoe UI", Helvetica, Arial, sans-serif;
-  }    
+  }
   #about-body{
     background-color: rgba(0, 5, 5, 0.65);
     letter-spacing: 2px;
@@ -55,7 +59,7 @@ body {
     border-color:#000;
   }
   .navbar {
-    background: rgba(0, 0, 0, 0.65) !important;       
+    background: rgba(0, 0, 0, 0.65) !important;
     width: 100vmax; }
     @media (max-width: 34em) {
       .navbar {
@@ -64,11 +68,11 @@ body {
     .navbar .nav-link {
       font-weight: bold;
       text-transform: lowercase; }
-  
+
   .feature {
     color: black;
     font-size: 0.8rem; }
-  
+
   .footer a {
     padding: 0.75rem; }
 
@@ -82,7 +86,7 @@ body {
     }
   .card{
     transition-property: all;
-    transition-duration: 1s;    
+    transition-duration: 1s;
     background-image: linear-gradient(135deg, rgb(202,45,0) , rgb(0,0,0));
     margin: 10px;
     border:outset thin ;
@@ -91,8 +95,9 @@ body {
     box-shadow: 0 0 20px 2px rgba(255, 205, 205, 0.65);
     @media screen and (max-width: 34em){
         margin-top: 10px;
-    }    
+    }
   }
+
   .card:hover{
     transform: scale(1.05);
   }
@@ -126,26 +131,32 @@ body {
 }
 .navbar a{
     transition-property: all;
-    transition-duration: 0.5s;    
+    transition-duration: 0.5s;
 }
 .navbar a:hover{
     transform: scale(1.3);
 }
 
-@keyframes fadeIn{
-    from{
-        opacity: 0;
-    }
-    to{
-        opacity: 1;
-    }
-}
 .social .fa{
     transition-property: all;
-    transition-duration: 0.2s;   
+    transition-duration: 0.2s;
 }
 .social .fa:hover{
     // animation-name: fadeIn;
-    // animation-duration: 1s;    
+    // animation-duration: 1s;
     transform: scale(1.5);
 }
+.come-in {
+  animation: come-in 0.4s ease forwards; }
+
+.go-out {
+  animation: go-out 0.4s ease forwards; }
+
+@keyframes come-in {
+  to {
+    transform: scale(1.08); } }
+
+@keyframes go-out {
+  from {
+    transform: scale(1.08); }  to {
+    transform: scale(1); } }
